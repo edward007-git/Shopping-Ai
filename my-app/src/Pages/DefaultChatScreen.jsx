@@ -43,7 +43,7 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
 
           {/* CONTENT */}
           <main className="flex-1 flex items-center justify-between px-8 pb-6 gap-6 flex-col md:flex-row">
-            {/* LEFT TEXT SECTION */}
+       
             <div className="w-full md:w-1/2 space-y-4">
               <p className="text-[12px] tracking-[0.25em] uppercase text-rose-200/80">
                 Modern Shopping Style
