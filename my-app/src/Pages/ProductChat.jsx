@@ -24,7 +24,7 @@ export default function ProductChat({ query, onReset }) {
               <button onClick={onReset} className="focus:outline-none">
                 <img
                   src={Aibot}
-                  alt="AI Bot"
+                  alt="AI - Bot"
                   className="h-10 w-10 rounded-full object-cover border border-white/20 hover:opacity-80 transition"
                 />
               </button>
