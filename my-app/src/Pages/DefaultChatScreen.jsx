@@ -6,7 +6,7 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
     <div className="min-h-screen flex items-center justify-center bg-black px-4 py-6">
       {/* OUTER FRAME (like device border) */}
       <div className="w-full max-w-5xl rounded-[32px] border-[3px] border-white/80 bg-black p-3">
-        {/* INNER PANEL */}
+      
         <div className="w-full h-[620px] rounded-[26px] bg-gradient-to-br from-[#050509] via-[#0b0b0f] to-black shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col overflow-hidden">
           
           {/* TOP BAR */}

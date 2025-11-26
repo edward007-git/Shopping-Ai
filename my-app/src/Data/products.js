@@ -1,4 +1,4 @@
-import React from "react";
+
 import Airpods from "../assets/airpods.jpeg";
 import JBL from "../assets/jbl.jpg";
 import SamsungBuds from "../assets/samsungbuds.jpg";
