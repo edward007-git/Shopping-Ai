@@ -75,7 +75,7 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
               </div>
             </div>
 
-            {/* RIGHT SIMPLE CARD (instead of big watch image) */}
+            {/* RIGHT SIMPLE CARD */}
             <div className="w-full md:w-1/2 flex md:justify-end">
               <div className="w-full max-w-sm h-52 rounded-[24px] bg-gradient-to-br from-[#1b1b23] via-[#111118] to-black border border-white/10 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_#f5a8b3_0,_transparent_55%)]" />
