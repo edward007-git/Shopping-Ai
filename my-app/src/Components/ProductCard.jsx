@@ -8,7 +8,7 @@ export default function ProductCard({ product, onFollow }) {
         {/* Image + badge */}
         <div className="relative flex-shrink-0">
           {product.badge && (
-            <span className="absolute left-2 top-2 rounded-full bg-rose-300 px-2 py-[2px] text-[10px] font-semibold text-black shadow-[0_0_12px_rgba(248,180,191,0.7)]">
+            <span className="absolute left-2 top-2 rounded-full bg-green-400 px-2 py-[2px] text-[10px] font-semibold text-black shadow-[0_0_12px_rgba(248,180,191,0.7)]">
               {product.badge}
             </span>
           )}
@@ -33,7 +33,8 @@ export default function ProductCard({ product, onFollow }) {
                 key={i}
                 className={`h-3.5 w-3.5 ${
                   i < product.rating
-                    ? "fill-rose-300 stroke-rose-300"
+                    ? "fill-yellow-400 stroke-yellow-400"
+
                     : "stroke-neutral-700"
                 }`}
               />
