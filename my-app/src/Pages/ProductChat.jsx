@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductCard from "../Components/ProductCard";
 import CapsuleBar from "../Components/CapsuleBar";
-import { products } from "../Data/products";
+import { products } from "../Data/Products";
 import Aibot from "../assets/robot.png";
 
 export default function ProductChat({ query, onReset }) {
