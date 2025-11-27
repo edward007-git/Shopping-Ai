@@ -69,7 +69,7 @@ export default function ProductCard({ product, onFollow }) {
         </button>
 
         <button
-          className="flex items-center gap-1 px-2 py-1 rounded-lg bg-rose-300 text-black font-medium shadow-[0_0_12px_rgba(248,180,191,0.6)] hover:bg-rose-200 transition"
+          className="flex items-center gap-1 px-2 py-1 rounded-lg bg-white text-black font-medium shadow-[0_0_12px_rgba(248,180,191,0.6)] hover:bg-white/80 transition"
           onClick={() => onFollow(product)}
         >
           <MessageSquarePlus className="h-3 w-3" />
