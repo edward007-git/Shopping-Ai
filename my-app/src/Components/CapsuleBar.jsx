@@ -9,14 +9,14 @@ export default function CapsuleBar({ capsules }) {
         border border-white/15 bg-white/5 px-4 py-2 text-[13px] 
         shadow-[0_8px_30px_rgba(0,0,0,0.6)] backdrop-blur-sm 
         focus-within:border-rose-300/70 transition-all">
-
-        {/* LAST CAPSULE */}
+{/*Chip*/}
         {last && (
-          <span className="flex-shrink-0 rounded-full border border-white/10 
-            bg-gradient-to-br from-rose-300 to-rose-200 text-black px-3 py-[6px] 
-            text-[11px] font-medium shadow-[0_0_12px_rgba(248,180,191,0.8)]">
-            {last}
-          </span>
+        <span className="flex-shrink-0 rounded-full border border-white/20 
+      bg-white text-black px-3 py-[6px] text-[11px] font-medium 
+       shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+      {last}
+</span>
+
         )}
 
         {/* INPUT */}
