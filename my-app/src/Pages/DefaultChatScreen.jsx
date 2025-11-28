@@ -3,7 +3,7 @@ import { ChevronUp } from "lucide-react";
 import Aibot from "../assets/robot.png";
 
 export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
-  // activeTab controls which nav button is white
+  
   const [activeTab, setActiveTab] = useState("home");
 
   return (
@@ -25,12 +25,12 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
               </div>
             </div>
 
-            <nav className="hidden md:flex items-center gap-2 text-xs" role="tablist">
+            <nav className="hidden md:flex items-center gap-2 text-xs" >
               <button
-                role="tab"
-                aria-pressed={activeTab === "home"}
+                
+              
                 onClick={() => setActiveTab("home")}
-                onMouseDown={(e) => e.currentTarget.blur()}
+                
                 className={`px-4 py-1.5 rounded-full font-medium transition ${
                   activeTab === "home"
                     ? "bg-white text-black"
@@ -41,10 +41,10 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
               </button>
 
               <button
-                role="tab"
-                aria-pressed={activeTab === "products"}
+                
+                
                 onClick={() => setActiveTab("products")}
-                onMouseDown={(e) => e.currentTarget.blur()}
+            
                 className={`px-4 py-1.5 rounded-full font-medium transition ${
                   activeTab === "products"
                     ? "bg-white text-black"
@@ -55,10 +55,10 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
               </button>
 
               <button
-                role="tab"
-                aria-pressed={activeTab === "collections"}
+              
+              
                 onClick={() => setActiveTab("collections")}
-                onMouseDown={(e) => e.currentTarget.blur()}
+                
                 className={`px-4 py-1.5 rounded-full font-medium transition ${
                   activeTab === "collections"
                     ? "bg-white text-black"
