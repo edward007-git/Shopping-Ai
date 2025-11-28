@@ -1,6 +1,6 @@
 import { useState } from "react";
-import DefaultChatScreen from "./pages/DefaultChatScreen";
-import ProductChat from "./pages/ProductChat";
+import DefaultChatScreen from "./Pages/DefaultChatScreen";
+import ProductChat from "./Pages/ProductChat";
 
 export default function App() {
   const [view, setView] = useState("default");
