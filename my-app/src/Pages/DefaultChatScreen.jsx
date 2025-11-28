@@ -32,10 +32,10 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
               <button className="px-4 py-1.5 rounded-full bg-white text-black font-medium">
                 Home
               </button>
-              <button className="px-4 py-1.5 rounded-full bg-white/5 text-neutral-300 border border-white/10 hover:bg-white transition">
+              <button className="px-4 py-1.5 rounded-full bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10 transition">
                 Products
               </button>
-              <button className="px-4 py-1.5 rounded-full bg-white/5 text-neutral-300 border border-white/10 hover:bg-white transition">
+              <button className="px-4 py-1.5 rounded-full bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10 transition">
                 Collections
               </button>
             </nav>
