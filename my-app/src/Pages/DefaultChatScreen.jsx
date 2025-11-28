@@ -1,14 +1,16 @@
+import { useState } from "react";
 import { ChevronUp } from "lucide-react";
 import Aibot from "../assets/robot.png";
 
 export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
+  // activeTab controls which nav button is white
+  const [activeTab, setActiveTab] = useState("home");
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-black px-4 py-6">
       {/* OUTER FRAME (like device border) */}
       <div className="w-full max-w-5xl rounded-[32px] border-[3px] border-white/80 bg-black p-3">
-      
         <div className="w-full h-[620px] rounded-[26px] bg-gradient-to-br from-[#050509] via-[#0b0b0f] to-black shadow-[0_25px_80px_rgba(0,0,0,0.85)] flex flex-col overflow-hidden">
-          
           {/* TOP BAR */}
           <header className="flex items-center justify-between px-8 pt-6 pb-4">
             <div className="flex items-center gap-3">
@@ -18,24 +20,51 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
                 className="h-10 w-10 rounded-full object-cover border border-white/20"
               />
               <div>
-                <p className="text-sm font-semibold text-white">
-                  Nova
-                </p>
-                <p className="text-xs text-neutral-400">
-                  Ask anything about brands &amp; prices
-                </p>
+                <p className="text-sm font-semibold text-white">Nova</p>
+                <p className="text-xs text-neutral-400">Ask anything about brands &amp; prices</p>
               </div>
             </div>
 
-          
-            <nav className="hidden md:flex items-center gap-2 text-xs">
-              <button className="px-4 py-1.5 rounded-full bg-white text-black font-medium">
+            <nav className="hidden md:flex items-center gap-2 text-xs" role="tablist">
+              <button
+                role="tab"
+                aria-pressed={activeTab === "home"}
+                onClick={() => setActiveTab("home")}
+                onMouseDown={(e) => e.currentTarget.blur()}
+                className={`px-4 py-1.5 rounded-full font-medium transition ${
+                  activeTab === "home"
+                    ? "bg-white text-black"
+                    : "bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10"
+                } focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/60`}
+              >
                 Home
               </button>
-              <button className="px-4 py-1.5 rounded-full bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10 transition">
+
+              <button
+                role="tab"
+                aria-pressed={activeTab === "products"}
+                onClick={() => setActiveTab("products")}
+                onMouseDown={(e) => e.currentTarget.blur()}
+                className={`px-4 py-1.5 rounded-full font-medium transition ${
+                  activeTab === "products"
+                    ? "bg-white text-black"
+                    : "bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10"
+                } focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/60`}
+              >
                 Products
               </button>
-              <button className="px-4 py-1.5 rounded-full bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10 transition">
+
+              <button
+                role="tab"
+                aria-pressed={activeTab === "collections"}
+                onClick={() => setActiveTab("collections")}
+                onMouseDown={(e) => e.currentTarget.blur()}
+                className={`px-4 py-1.5 rounded-full font-medium transition ${
+                  activeTab === "collections"
+                    ? "bg-white text-black"
+                    : "bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10"
+                } focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/60`}
+              >
                 Collections
               </button>
             </nav>
@@ -43,7 +72,6 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
 
           {/* CONTENT */}
           <main className="flex-1 flex items-center justify-between px-8 pb-6 gap-6 flex-col md:flex-row">
-       
             <div className="w-full md:w-1/2 space-y-4">
               <p className="text-[12px] tracking-[0.25em] uppercase text-rose-200/80">
                 Modern Shopping Style
@@ -54,8 +82,8 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
               </h1>
 
               <p className="text-sm text-neutral-400 max-w-md">
-                Discover the latest trends, compare prices across brands, and
-                find the best deals in seconds with your personal shopping AI.
+                Discover the latest trends, compare prices across brands, and find the best deals in
+                seconds with your personal shopping AI.
               </p>
 
               {/* Small stats row */}
@@ -82,9 +110,7 @@ export default function DefaultChatScreen({ query, setQuery, onSubmit }) {
                 <div className="relative h-full flex flex-col justify-between p-5">
                   <div>
                     <p className="text-xs text-rose-200/90">Live Suggestion</p>
-                    <p className="mt-1 text-base font-semibold text-white">
-                      “Best smartwatches AMOLED display”
-                    </p>
+                    <p className="mt-1 text-base font-semibold text-white">“Best smartwatches AMOLED display”</p>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-[11px] text-neutral-400">
